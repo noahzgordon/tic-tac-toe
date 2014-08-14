@@ -2,22 +2,39 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tic Tac Toe</title>
-    <!-- <link rel="stylesheet" type="text/css" href="lib/stylesheets/ttt.css"> -->
+    <title>Tic Cat Toe</title>
+    <link rel="stylesheet" type="text/css" href="lib/stylesheets/ttt.css">
   </head>
 
   <body>
-    <h1>Tic Tac Toe</h1>
-    <ul id="ttt-board" class="group"></ul>
+    <h1>Tic Cat Toe</h1>
+
+    <ul id="ttt-board" class="group">
+      <li id="pos_0_0"></li>
+      <li id="pos_0_1"></li>
+      <li id="pos_0_2"></li>
+
+      <li id="pos_1_0"></li>
+      <li id="pos_1_1"></li>
+      <li id="pos_1_2"></li>
+
+      <li id="pos_2_0"></li>
+      <li id="pos_2_1"></li>
+      <li id="pos_2_2"></li>
+    </ul>
+
+    <p id="turn_indicator">x cat's turn</p>
 
     <script src="vendor/jquery-2.1.1.js"></script>
     <script src="lib/board.js"></script>
     <script src="lib/game.js"></script>
+    <script src="lib/ttt_ui.js"></script>
+    <script src="lib/click_handler.js"></script>
+
 
     <script>
-      var game = new TTT.Game(function(){
-        console.log("It's over!");
-      })
+      var game = new TTT.Game();
+      $(clickHandler);
     </script>
   </body>
 </html>
